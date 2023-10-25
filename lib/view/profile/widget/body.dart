@@ -22,23 +22,25 @@ class _BodyProfileState extends State<BodyProfile> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 8, vertical: 7),
-      width: width,
-      height: height,
-      child: Column(
-        children: [
-          topProfilePicAndName(width, height),
-          SizedBox(
-            height: 40,
-          ),
-          middleStatusListView(width, height),
-          SizedBox(
-            height: 30,
-          ),
-          middleDashboard(width, height),
-          bottomSection(width, height),
-        ],
+    return SingleChildScrollView(
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 8, vertical: 7),
+        width: width,
+        height: height,
+        child: Column(
+          children: [
+            topProfilePicAndName(width, height),
+            SizedBox(
+              height: 40,
+            ),
+            middleStatusListView(width, height),
+            SizedBox(
+              height: 30,
+            ),
+            middleDashboard(width, height),
+            bottomSection(width, height),
+          ],
+        ),
       ),
     );
   }
@@ -61,10 +63,7 @@ class _BodyProfileState extends State<BodyProfile> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Amir.H Bayat",
-                style: AppThemes.profileDevName
-              ),
+              Text("Ezequiel S. Hellwig", style: AppThemes.profileDevName),
               Text(
                 "Flutter Developer",
                 style: TextStyle(
@@ -194,7 +193,7 @@ class _BodyProfileState extends State<BodyProfile> {
               height: height,
               leadingBackColor: Colors.green[600],
               icon: Icons.wallet_travel_outlined,
-              title: "Payments",
+              title: "Add Shoes",
               trailing: Container(
                 width: 80,
                 height: 30,
@@ -207,7 +206,7 @@ class _BodyProfileState extends State<BodyProfile> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "2 New",
+                      "ADD",
                       style: TextStyle(
                           color: AppConstantsColor.lightTextColor,
                           fontWeight: FontWeight.w500),
@@ -312,7 +311,7 @@ class _BodyProfileState extends State<BodyProfile> {
                   fontSize: 17),
             ),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             Text(
               "    Log Out",

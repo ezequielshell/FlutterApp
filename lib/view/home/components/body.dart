@@ -25,15 +25,17 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-    return Column(
-      children: [
-        topCategoriesWidget(width, height),
-        SizedBox(height: 10),
-        middleCategoriesWidget(width, height),
-        SizedBox(height: 5),
-        moreTextWidget(),
-        lastCategoriesWidget(width, height),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          topCategoriesWidget(width, height),
+          SizedBox(height: 10),
+          middleCategoriesWidget(width, height),
+          SizedBox(height: 5),
+          moreTextWidget(),
+          lastCategoriesWidget(width, height),
+        ],
+      ),
     );
   }
 
@@ -358,10 +360,8 @@ class _BodyState extends State<Body> {
                           width: width / 4,
                           height: height / 42,
                           child: FittedBox(
-                            child: Text(
-                              "\$${model.price.toStringAsFixed(2)}",
-                              style: AppThemes.homeGridPrice
-                            ),
+                            child: Text("\$${model.price.toStringAsFixed(2)}",
+                                style: AppThemes.homeGridPrice),
                           ),
                         ),
                       ),
