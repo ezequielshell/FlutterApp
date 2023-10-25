@@ -25,26 +25,28 @@ class _BodyBagViewState extends State<BodyBagView>
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 8.0),
-      width: width,
-      height: height,
-      child: Column(
-        children: [
-          topText(width, height),
-          Divider(
-            color: Colors.grey,
-          ),
-          itemsOnBag.isEmpty
-              ? EmptyList()
-              : Column(children: [
-                  mainListView(width, height),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  bottomInfo(width, height),
-                ])
-        ],
+    return SingleChildScrollView(
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 8.0),
+        width: width,
+        height: height,
+        child: Column(
+          children: [
+            topText(width, height),
+            Divider(
+              color: Colors.grey,
+            ),
+            itemsOnBag.isEmpty
+                ? EmptyList()
+                : Column(children: [
+                    mainListView(width, height),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    bottomInfo(width, height),
+                  ])
+          ],
+        ),
       ),
     );
   }
@@ -235,7 +237,7 @@ class _BodyBagViewState extends State<BodyBagView>
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 10,
           ),
           materialButton(width, height)
         ],
