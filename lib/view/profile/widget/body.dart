@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:sneakers_app/theme/custom_app_theme.dart';
+import 'package:sneakers_app/view/profile/widget/tennis_page.dart';
 
 import '../../../../animation/fadeanimation.dart';
 import '../../../../models/models.dart';
@@ -201,22 +202,31 @@ class _BodyProfileState extends State<BodyProfile> {
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.blue[700],
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "ADD",
-                      style: TextStyle(
-                          color: AppConstantsColor.lightTextColor,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: AppConstantsColor.lightTextColor,
-                      size: 15,
-                    )
-                  ],
+                child: InkWell(
+                  // <-- Adicionado este widget para detecção de toque
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TennisPage()),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "ADD",
+                        style: TextStyle(
+                            color: AppConstantsColor.lightTextColor,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        color: AppConstantsColor.lightTextColor,
+                        size: 15,
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

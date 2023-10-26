@@ -19,7 +19,17 @@ class BodyBagView extends StatefulWidget {
 
 class _BodyBagViewState extends State<BodyBagView>
     with SingleTickerProviderStateMixin {
+  int quantity = 1;
+  Map<ShoeModel, int> itemQuantities = {};
   int lengthsOfItemsOnBag = itemsOnBag.length;
+
+  @override
+  void initState() {
+    super.initState();
+    for (var item in itemsOnBag) {
+      itemQuantities[item] = 1; // Inicializa todas as quantidades como 1
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -163,9 +173,24 @@ class _BodyBagViewState extends State<BodyBagView>
                             children: [
                               GestureDetector(
                                 onTap: () {
+                                  // if (quantity > 1) {
+                                  //   // Assegura que a quantidade nunca vai abaixo de 1
+                                  //   setState(() {
+                                  //     if (itemQuantities[currentBagItem]! > 1) {
+                                  //       itemQuantities[currentBagItem]! - 1;
+                                  //     } else {
+                                  //       itemsOnBag.removeAt(index);
+                                  //     }
+                                  //   });
+                                  // }
                                   setState(() {
-                                    itemsOnBag.remove(currentBagItem);
-                                    lengthsOfItemsOnBag = itemsOnBag.length;
+                                    // Decrementa a quantidade do item atual
+                                    itemQuantities[currentBagItem]! - 1;
+
+                                    if (itemQuantities[currentBagItem]! <= 0) {
+                                      itemsOnBag.removeAt(index);
+                                      itemQuantities.remove(currentBagItem);
+                                    }
                                   });
                                 },
                                 child: Container(
@@ -176,21 +201,28 @@ class _BodyBagViewState extends State<BodyBagView>
                                     color: Colors.grey[300],
                                   ),
                                   child: Center(
-                                      child: Icon(
-                                    Icons.remove,
-                                    size: 15,
-                                  )),
+                                    child: Icon(
+                                      Icons.remove,
+                                      size: 15,
+                                    ),
+                                  ),
                                 ),
                               ),
                               SizedBox(
                                 width: 10,
                               ),
-                              Text("1", style: AppThemes.bagProductNumOfShoe),
+                              Text("$quantity",
+                                  style: AppThemes
+                                      .bagProductNumOfShoe), // Mostra a quantidade atual
                               SizedBox(
                                 width: 10,
                               ),
                               GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  setState(() {
+                                    quantity++; // Aumenta a quantidade
+                                  });
+                                },
                                 child: Container(
                                   width: 30,
                                   height: 30,
@@ -199,14 +231,15 @@ class _BodyBagViewState extends State<BodyBagView>
                                     color: Colors.grey[300],
                                   ),
                                   child: Center(
-                                      child: Icon(
-                                    Icons.add,
-                                    size: 15,
-                                  )),
+                                    child: Icon(
+                                      Icons.add,
+                                      size: 15,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                     ),
