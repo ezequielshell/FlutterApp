@@ -1,16 +1,40 @@
 # sneakers_app
 
-A new Flutter project.
+Este aplicativo está sendo desenvolvido na aula de Desenvolimento Mobile utilizando o Flutter e o Dart, sendo acadêmico e sem intúito de venda comercial, utilizado com base de um mockup e desenvolvido através disso.
 
-## Getting Started
+ ## Imagem do Mockup:
+- ![image](https://github.com/ezequielshell/FlutterApp/assets/104174080/1229145f-3fca-4372-ac55-426fdabddbe5)
+- ![image](https://github.com/ezequielshell/FlutterApp/assets/104174080/d26a4740-6884-4700-bb28-f2c7e1bbfd03)
+- ![image](https://github.com/ezequielshell/FlutterApp/assets/104174080/002d3cd3-fc6e-4b62-a39b-8b68fe257ea5)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Tela Principal
+- Catálogo de Tênis com opções de novidades
+- Catálogo completo
+
+## Tela de Tênis
+- Conteudo e explicação do Tênis
+- Tamanhos
+- Adição no Carrinho de Compras
+
+## Tela de Carrinho de Compras
+- Tela vazia sem itens
+- Tela com o devido tênis, valor e quantidade
+- botão de Compra dos itens
+
+## Tela de Perfil
+- Perfil do usuário
+- Status do usuário
+- Botões Genéricos para possíveis adições
+- Botões de sair da Conta
+
+## Como executar o projeto
+- Certifique-se de que o Flutter esteja na versão 3.10.1 e o Dart na versão 3.0.1;
+- Caso esteja no Android Studio, vá em File > Settings > Languages & Frameworks > Flutter e insira o caminho da pasta do SDK do Flutter em Flutter SDK path;
+- Abra o arquivo pubspec.yaml e clique em pub get para que as dependências (pacotes) utilizadas no projeto sejam carregadas;
+
+## Atualizações 25/10/2023
+- Atualizações de possíveis CRUD's para serem utilizados na aplicação.
