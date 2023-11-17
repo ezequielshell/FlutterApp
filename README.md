@@ -33,11 +33,21 @@ Este aplicativo está sendo desenvolvido na aula de Desenvolimento Mobile utiliz
 
 ## Lista de Funcionalidades
 
-Notificações, Informações do produto, Catálogo de itens, REST APi de produtos, Carrinho, Gerencia de Usuários, Cadastro, WishLlist, Suporte de Usuário, Catálogo por marca.
-![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png)
-![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png)
-![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
+![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) Já Desenvolvidos
+- Informações do produto
+- Catálogo de itens
+- REST APi de produtos
+- Carrinho
+- 
+![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) Serão Desenvolvidas
+-  Gerencia de Usuários
+-  Cadastro
+-  WishList
 
+![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Não Serão Desenvolvidas
+- Notificações
+- Suporte de Usuário
+- Catálogo por marca
 
 ## Como executar o projeto
 - Certifique-se de que o Flutter esteja na versão 3.10.1 e o Dart na versão 3.0.1;
