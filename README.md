@@ -38,7 +38,7 @@ Este aplicativo está sendo desenvolvido na aula de Desenvolimento Mobile utiliz
 - Catálogo de itens
 - REST APi de produtos
 - Carrinho
-- 
+  
 ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) Serão Desenvolvidas
 -  Gerencia de Usuários
 -  Cadastro
