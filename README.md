@@ -31,6 +31,14 @@ Este aplicativo está sendo desenvolvido na aula de Desenvolimento Mobile utiliz
 - Botões Genéricos para possíveis adições
 - Botões de sair da Conta
 
+## Lista de Funcionalidades
+
+Notificações, Informações do produto, Catálogo de itens, REST APi de produtos, Carrinho, Gerencia de Usuários, Cadastro, WishLlist, Suporte de Usuário, Catálogo por marca.
+![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png)
+![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png)
+![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
+
+
 ## Como executar o projeto
 - Certifique-se de que o Flutter esteja na versão 3.10.1 e o Dart na versão 3.0.1;
 - Caso esteja no Android Studio, vá em File > Settings > Languages & Frameworks > Flutter e insira o caminho da pasta do SDK do Flutter em Flutter SDK path;
