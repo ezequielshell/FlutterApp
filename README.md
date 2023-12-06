@@ -6,6 +6,7 @@ Este aplicativo está sendo desenvolvido na aula de Desenvolimento Mobile utiliz
 - ![image](https://github.com/ezequielshell/FlutterApp/assets/104174080/1229145f-3fca-4372-ac55-426fdabddbe5)
 - ![image](https://github.com/ezequielshell/FlutterApp/assets/104174080/d26a4740-6884-4700-bb28-f2c7e1bbfd03)
 - ![image](https://github.com/ezequielshell/FlutterApp/assets/104174080/002d3cd3-fc6e-4b62-a39b-8b68fe257ea5)
+  
 
 
 
