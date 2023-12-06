@@ -9,6 +9,7 @@ import '../../../../models/models.dart';
 import '../../../../utils/constants.dart';
 import '../../../../view/profile/widget/repeated_list.dart';
 import '../../../data/dummy_data.dart';
+import 'login.dart';
 
 class BodyProfile extends StatefulWidget {
   const BodyProfile({Key? key}) : super(key: key);
@@ -323,13 +324,22 @@ class _BodyProfileState extends State<BodyProfile> {
             SizedBox(
               height: 20,
             ),
-            Text(
-              "    Log Out",
-              style: TextStyle(
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+              child: Text(
+                "Log Out",
+                style: TextStyle(
                   fontWeight: FontWeight.w600,
                   color: Colors.red[500],
-                  fontSize: 18),
-            ),
+                  fontSize: 18,
+                ),
+              ),
+            )
           ],
         ),
       ),
